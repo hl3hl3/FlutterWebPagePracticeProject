@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_page/light_shop_page.dart';
 
 void main() => runApp(WebApp());
 
@@ -26,10 +27,25 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Wrap(
-            children: <Widget>[],
+            children: <Widget>[
+              RaisedButton(
+                child: Text('light shop page'),
+                onPressed: _showLightShopPage(context),
+              )
+            ],
           ),
         ),
       ),
     );
+  }
+
+  _showLightShopPage(BuildContext context) {
+    return () {
+      Navigator.push(context, MaterialPageRoute(
+        builder: (BuildContext context) {
+          return LightShopPage();
+        },
+      ));
+    };
   }
 }
