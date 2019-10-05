@@ -30,7 +30,7 @@ class LightShopPage extends StatelessWidget {
           height: 16,
         ),
         Image.network(
-          'https://liteshop.tw/product_photos/BsYhKBpjPz2gN2PwMBsPcqft1569237379.jpg',
+          'https://drive.google.com/thumbnail?id=1baqqsCfL9XpQO4V7rq3q9ueM7i7ga_dg&sz=w600',
         ),
         _infoArea(context),
         _description(context),
@@ -58,7 +58,7 @@ class LightShopPage extends StatelessWidget {
         Row(
           children: <Widget>[
             Image.network(
-              'https://liteshop.tw/product_photos/BsYhKBpjPz2gN2PwMBsPcqft1569237379.jpg',
+              'https://drive.google.com/thumbnail?id=1baqqsCfL9XpQO4V7rq3q9ueM7i7ga_dg&sz=w600',
               width: imgWidth,
             ),
             Expanded(
@@ -198,12 +198,11 @@ class LightShopPage extends StatelessWidget {
       color: Colors.grey.shade200,
       padding: EdgeInsets.symmetric(vertical: 16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Center(
-            child: Text(
-              '@小流浪專區, All Rights Reserved.',
-              style: themedText.body1.apply(color: Colors.grey.shade700),
-            ),
+          Text(
+            '@小流浪專區, All Rights Reserved.',
+            style: themedText.body1.apply(color: Colors.grey.shade700),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -229,6 +228,10 @@ class LightShopPage extends StatelessWidget {
                 ),
               )
             ],
+          ),
+          Text(
+            '原始網頁 https://liteshop.tw/products/BsYhKBpjPz2gN2PwMBsPcqft',
+            style: themedText.body1.apply(color: Colors.grey.shade700),
           ),
         ],
       ),
