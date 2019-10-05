@@ -6,7 +6,12 @@ class LightShopPage extends StatelessWidget {
     bool isMobile = MediaQuery.of(context).size.width < 600;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         elevation: 0,
       ),
       body: SingleChildScrollView(
